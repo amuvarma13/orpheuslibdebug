@@ -1,6 +1,6 @@
-from orpheus.mm_model_from_colab.model import (
+from mm_model import (
     OrpheusConfig,
     OrpheusForConditionalGeneration,
+    OrpheusUtility
 )
-from orpheus.mm_model_from_colab.utils import OrpheusUtility
-orpheus = OrpheusUtility()
+my_orpheus = OrpheusUtility()
