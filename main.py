@@ -1,4 +1,4 @@
-from orpheus.mm_model_from_colab import (
+from orpheus.mm_model import (
     OrpheusConfig,
     OrpheusForConditionalGeneration,
     OrpheusUtility
