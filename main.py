@@ -26,3 +26,5 @@ output_tokens = model.generate(
     repetition_penalty=1.1, 
     temperature=0.7
     )
+
+print(tokenizer.decode(output_tokens[0], skip_special_tokens=True))
