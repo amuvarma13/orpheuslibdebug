@@ -4,6 +4,7 @@ from orpheus.mm_model import (
     OrpheusUtility
 )
 import librosa
+import torch
 orpheus = OrpheusUtility()
 
 from transformers import AutoModel, AutoTokenizer, AutoConfig
@@ -12,7 +13,7 @@ AutoModel.register(OrpheusConfig, OrpheusForConditionalGeneration)
 
 orpheus.fast_download_from_hub() 
 model_name = "amuvarma/zuck-3bregconvo-automodelcompat"
-model = AutoModel.from_pretrained(model_name)
+model = AutoModel.from_pretrained(model_name).to("cuda").to(torch.bfloat16)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 # EITHER get inputs from text
@@ -22,7 +23,7 @@ print(inputs)
 
 output_tokens = model.generate(
     **inputs, 
-    max_new_tokens=2000, 
+    max_new_tokens=200, 
     repetition_penalty=1.1, 
     temperature=0.7
     )
