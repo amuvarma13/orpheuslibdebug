@@ -19,3 +19,10 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 prompt = "Okay, so what would be an example of a healthier breakfast option then. Can you tell me?"
 inputs = orpheus.get_inputs_from_text(prompt)
 print(inputs)
+
+output_tokens = model.generate(
+    **inputs, 
+    max_new_tokens=2000, 
+    repetition_penalty=1.1, 
+    temperature=0.7
+    )
