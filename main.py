@@ -19,7 +19,6 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 # EITHER get inputs from text
 prompt = "Okay, so what would be an example of a healthier breakfast option then. Can you tell me?"
 inputs = orpheus.get_inputs_from_text(prompt)
-inputs = inputs.to("cuda")
 
 output_tokens = model.generate(
     **inputs, 
