@@ -11,14 +11,14 @@ from transformers import AutoModel, AutoTokenizer, AutoConfig
 AutoConfig.register("orpheus", OrpheusConfig)
 AutoModel.register(OrpheusConfig, OrpheusForConditionalGeneration)
 
-orpheus.fast_download_from_hub() 
+orpheus.initialise()
 model_name = "amuvarma/zuck-3bregconvo-automodelcompat"
 model = AutoModel.from_pretrained(model_name).to("cuda").to(torch.bfloat16)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 # EITHER get inputs from text
 prompt = "Okay, so what would be an example of a healthier breakfast option then. Can you tell me?"
-inputs = orpheus.get_inputs_from_text(prompt)
+inputs = orpheus.get_inputs(text=prompt)
 
 output_tokens = model.generate(
     **inputs, 
