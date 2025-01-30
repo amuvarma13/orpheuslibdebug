@@ -7,7 +7,7 @@ from orpheus.mm_model import (
 from orpheus.mm_model.assets import SPEECH_WAV_PATH
 import librosa
 import torch
-# orpheus = OrpheusUtility()
+orpheus = OrpheusUtility()
 
 # from transformers import AutoModel, AutoTokenizer, AutoConfig
 # AutoConfig.register("orpheus", OrpheusConfig)
@@ -22,7 +22,7 @@ import torch
 print(SPEECH_WAV_PATH)
 y, sr = librosa.load(SPEECH_WAV_PATH)
 
-print(y.shape)
+embeds = orpheus.get_inputs(speech=y)
 
 # EITHER get inputs from text
 # prompt = "Okay, so what would be an example of a healthier breakfast option then. Can you tell me?"
