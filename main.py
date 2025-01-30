@@ -25,12 +25,15 @@ from orpheus.mm_model.assets import SPEECH_WAV_PATH
 import torchaudio
 waveform, sample_rate = torchaudio.load(SPEECH_WAV_PATH)
 
+print("adding first message")
 first_message = {
     "format":"speech",
-    "data": y
+    "data": waveform
 }
 
+print("added first message")
 conversation.append_message(first_message)
 
+print("generating response")
 results = conversation.generate_response()
 print(results)
