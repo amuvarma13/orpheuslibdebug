@@ -2,8 +2,9 @@ from orpheus.mm_model import (
     OrpheusConfig,
     OrpheusForConditionalGeneration,
     OrpheusUtility, 
-    assets
+
 )
+from orpheus.mm_model.assets import SPEECH_WAV_PATH
 import librosa
 import torch
 # orpheus = OrpheusUtility()
@@ -18,7 +19,7 @@ import torch
 # tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 
-print(assets)
+print(SPEECH_WAV_PATH)
 
 # EITHER get inputs from text
 # prompt = "Okay, so what would be an example of a healthier breakfast option then. Can you tell me?"
