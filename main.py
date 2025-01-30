@@ -7,6 +7,7 @@ from orpheus.mm_model import (
 from orpheus.mm_model.assets import SPEECH_WAV_PATH
 import librosa
 import torch
+import torchaudio
 orpheus = OrpheusUtility()
 
 # from transformers import AutoModel, AutoTokenizer, AutoConfig
