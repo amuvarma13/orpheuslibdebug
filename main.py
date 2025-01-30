@@ -37,3 +37,12 @@ conversation.append_message(first_message)
 print("generating response")
 results = conversation.generate_response()
 print(results)
+
+second_message = {
+    "format": "text",
+    "data": "Where are those foods from?"
+}
+
+conversation.append_message(second_message)
+mres= conversation.generate_response()
+print(mres)
