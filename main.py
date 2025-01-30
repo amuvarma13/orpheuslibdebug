@@ -6,16 +6,16 @@ from orpheus.mm_model import (
 )
 import librosa
 import torch
-orpheus = OrpheusUtility()
+# orpheus = OrpheusUtility()
 
-from transformers import AutoModel, AutoTokenizer, AutoConfig
-AutoConfig.register("orpheus", OrpheusConfig)
-AutoModel.register(OrpheusConfig, OrpheusForConditionalGeneration)
+# from transformers import AutoModel, AutoTokenizer, AutoConfig
+# AutoConfig.register("orpheus", OrpheusConfig)
+# AutoModel.register(OrpheusConfig, OrpheusForConditionalGeneration)
 
-orpheus.initialise()
-model_name = "amuvarma/zuck-3bregconvo-automodelcompat"
-model = AutoModel.from_pretrained(model_name).to("cuda").to(torch.bfloat16)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
+# orpheus.initialise()
+# model_name = "amuvarma/zuck-3bregconvo-automodelcompat"
+# model = AutoModel.from_pretrained(model_name).to("cuda").to(torch.bfloat16)
+# tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 
 print(assets)
