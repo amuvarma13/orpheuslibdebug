@@ -20,9 +20,10 @@ orpheus = OrpheusUtility()
 
 
 print(SPEECH_WAV_PATH)
-y, sr = librosa.load(SPEECH_WAV_PATH)
+waveform, sample_rate = torchaudio.load(SPEECH_WAV_PATH)
+#convert y 
 
-embeds = orpheus.get_inputs(speech=y)
+embeds = orpheus.get_inputs(speech=waveform)
 print(embeds.shape)
 
 # EITHER get inputs from text
