@@ -34,3 +34,7 @@ output_tokens = model.generate(
     )
 
 print(tokenizer.decode(output_tokens[0], skip_special_tokens=True))
+
+results = orpheus.parse_output_tokens(output_tokens[0])
+print(results)
+
