@@ -25,7 +25,7 @@ waveform, sample_rate = torchaudio.load(SPEECH_WAV_PATH)
 #convert y 
 
 embeds = orpheus.get_inputs(speech=waveform)
-print(embeds.shape)
+print(embeds)
 
 # EITHER get inputs from text
 # prompt = "Okay, so what would be an example of a healthier breakfast option then. Can you tell me?"
