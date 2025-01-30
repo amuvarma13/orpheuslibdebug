@@ -23,7 +23,7 @@ print(SPEECH_WAV_PATH)
 y, sr = librosa.load(SPEECH_WAV_PATH)
 
 embeds = orpheus.get_inputs(speech=y)
-print(embeds)
+print(embeds.shape)
 
 # EITHER get inputs from text
 # prompt = "Okay, so what would be an example of a healthier breakfast option then. Can you tell me?"
