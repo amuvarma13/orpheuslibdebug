@@ -20,8 +20,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 orpheus.register_auto_model(model)
 waveform, sample_rate = torchaudio.load(SPEECH_WAV_PATH)
 
-embeds = orpheus.get_inputs(speech=waveform)
-print(embeds)
+inputs = orpheus.get_inputs(speech=waveform)
 
 # EITHER get inputs from text
 # prompt = "Okay, so what would be an example of a healthier breakfast option then. Can you tell me?"
