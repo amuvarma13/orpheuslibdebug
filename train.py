@@ -17,6 +17,8 @@ orpheus.initialise(
     model_name = model_name # optional, defaults to Canopy's pretrained model
 )
 
+print("finished initialising")
 orpheus_trainer = orpheus.create_trainer() # subclasses Trainer 
 
+print("created trainer")
 orpheus_trainer.train() # pass any additional params Trainer accepts in the X.train(**args)
