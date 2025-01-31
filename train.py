@@ -1,7 +1,7 @@
 from orpheus.src.orpheus import OrpheusTrainer
 import wandb
 
-wandb.init(project="orpheusdeblib", run_name="s1")
+wandb.init(project="orpheusdeblib", name="s1")
 
 speech_dataset_name = "amuvarma/5k-qa-pairs-tttts"
 text_dataset_name = "amuvarma/va-320k-330k-snac-no-identity-QA_TTTTS"
