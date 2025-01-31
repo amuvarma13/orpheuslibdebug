@@ -4,7 +4,7 @@ import wandb
 wandb.init(project="orpheusdeblib", name="s1")
 
 speech_dataset_name = "amuvarma/5k-qa-pairs-tttts"
-text_dataset_name = "amuvarma/va-320k-330k-snac-no-identity-QA_TTTTS"
+text_dataset_name = "amuvarma/zuck-nopunc-text"
 
 model_name = "amuvarma/3b-10m-pretrain-full"
 orpheus = OrpheusTrainer(
@@ -15,7 +15,7 @@ orpheus = OrpheusTrainer(
 )
 
 print("finished initialising")
-orpheus_trainer = orpheus.create_trainer(report_to = "wandb",) # subclasses Trainer 
+orpheus_trainer = orpheus.create_trainer(report_to = "wandb",) # pass in any trainer args here
 
 print("created trainer")
-orpheus_trainer.train()
+orpheus_trainer.train() #inherits from Trainer
