@@ -3,14 +3,12 @@ import wandb
 
 wandb.init(project="orpheusdeblib", name="s1")
 
-speech_dataset_name = "amuvarma/flattened-convos-regzuck"
-text_dataset_name = "amuvarma/zuck-nopunc-text"
+dataset_name = "amuvarma/flattened-convos-regzuck"
 
 model_name = "amuvarma/3b-10m-pretrain-full"
 orpheus = OrpheusTrainer(
-    stage = "stage_1",
-    speech_dataset_name = speech_dataset_name,
-    text_dataset_name = text_dataset_name, # optional, defaults to generic QA dataset for LLM tuning
+    stage = "stage_2",
+    dataset_name = dataset_name,
     model_name = model_name # optional, defaults to Canopy's pretrained model
 )
 
