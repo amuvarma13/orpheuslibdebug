@@ -9,8 +9,6 @@ orpheus = OrpheusTrainer(
     speech_dataset_name = speech_dataset_name,
     text_dataset_name = text_dataset_name, # optional, defaults to generic QA dataset for LLM tuning
     use_wandb = True, # optional, defaults to False
-    wandb_project_name = "debug-lib-1", # optional defaults to "orpheus-stage-1"
-    wandb_run_name = "rx", # optional defaults to "r0"
     model_name = model_name # optional, defaults to Canopy's pretrained model
 )
 
