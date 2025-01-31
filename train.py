@@ -3,7 +3,7 @@ import wandb
 
 wandb.init(project="orpheusdeblib", name="s1")
 
-speech_dataset_name = "amuvarma/5k-qa-pairs-tttts"
+speech_dataset_name = "amuvarma/flattened-convos-regzuck"
 text_dataset_name = "amuvarma/zuck-nopunc-text"
 
 model_name = "amuvarma/3b-10m-pretrain-full"
