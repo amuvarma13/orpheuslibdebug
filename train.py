@@ -1,4 +1,4 @@
-from .orpheus.src import OrpheusTrainer
+from orpheus.src.orpheus import OrpheusTrainer
 
 speech_dataset_name = "amuvarma/5k-qa-pairs-tttts"
 text_dataset_name = "amuvarma/va-320k-330k-snac-no-identity-QA_TTTTS"
