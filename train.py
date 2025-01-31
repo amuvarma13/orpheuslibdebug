@@ -15,9 +15,7 @@ orpheus = OrpheusTrainer(
 )
 
 print("finished initialising")
-orpheus_trainer = orpheus.create_trainer() # subclasses Trainer 
+orpheus_trainer = orpheus.create_trainer(report_to = "wandb",) # subclasses Trainer 
 
 print("created trainer")
-orpheus_trainer.train(
-    report_to = "wandb",
-) # pass any additional params Trainer accepts in the X.train(**args)
+orpheus_trainer.train()
