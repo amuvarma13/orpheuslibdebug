@@ -5,6 +5,8 @@ orpheus = OrpheusTrainer()
 speech_dataset_name = "amuvarma/5k-qa-pairs-tttts"
 text_dataset_name = "amuvarma/va-320k-330k-snac-no-identity-QA_TTTTS"
 
+model_name = "amuvarma/3b-10m-pretrain-full"
+
 orpheus.initialise(
     stage = "stage_1",
     speech_dataset_name = speech_dataset_name,
@@ -12,7 +14,7 @@ orpheus.initialise(
     use_wandb = True, # optional, defaults to False
     wandb_project_name = None, # optional defaults to "orpheus-stage-1"
     wandb_run_name = None, # optional defaults to "r0"
-    model_name = None # optional, defaults to Canopy's pretrained model
+    model_name = model_name # optional, defaults to Canopy's pretrained model
 )
 
 orpheus_trainer = orpheus.create_trainer() # subclasses Trainer 
