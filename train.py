@@ -3,7 +3,7 @@ import wandb
 
 wandb.init(project="orpheusdeblib", name="s4")
 
-
+dataset_name = "amuvarma/flattened-convos-regzuck"
 model_name = "amuvarma/zuck-3bregconvo-automodelcompat"
 
 #
