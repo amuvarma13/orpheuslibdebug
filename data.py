@@ -7,7 +7,7 @@ dataset_name = "amuvarma/flattened-convos-regzuck"
 data_processor = OrpheusDataProcessor()
 
 dataset = data_processor.fast_load_dataset(dataset_name)
-dataset = dataset.select(range(100))
+dataset = dataset.select(range(20))
 processed_dataset = data_processor.adapt_stage_1_to_stage_5_dataset(dataset)
 
 orpheus = OrpheusTrainer(    
