@@ -1,4 +1,4 @@
-from orpheus import OrpheusTrainer, OrpheusDataProcessor
+from orpheus.src.orpheus import OrpheusTrainer, OrpheusDataProcessor
 
 dataset_name = "amuvarma/flattened-convos-regzuck"
 
