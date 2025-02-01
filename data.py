@@ -2,7 +2,7 @@ from orpheus.src.orpheus import OrpheusTrainer, OrpheusDataProcessor
 import wandb
 
 
-wandb.init(project="orpheusdeblib", name="s4")
+wandb.init(project="orpheusdeblib", name="s5")
 
 dataset_name = "amuvarma/test-ds-kok-proc"
 model_name = "amuvarma/zuck-3bregconvo-automodelcompat"
