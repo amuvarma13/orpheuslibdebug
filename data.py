@@ -16,12 +16,12 @@ processed_dataset = processed_dataset.cast_column('question_audio', Audio())
 
 processed_dataset.push_to_hub("test-ds-kok-proc")
 
-# orpheus = OrpheusTrainer(    
-#     stage = "stage_5",
-#     dataset = processed_dataset, 
-#     model_name = "amuvarma/zuck-3bregconvo-automodelcompat" # pass a 🤗 model or local checkpoint folder)
-# )
+orpheus = OrpheusTrainer(    
+    stage = "stage_5",
+    dataset = processed_dataset, 
+    model_name = "amuvarma/zuck-3bregconvo-automodelcompat" # pass a 🤗 model or local checkpoint folder)
+)
 
-# orpheus_trainer = orpheus.create_trainer()
+orpheus_trainer = orpheus.create_trainer()
 
-# orpheus_trainer.train() # subclasses 🤗 Trainer
+orpheus_trainer.train() # subclasses 🤗 Trainer
