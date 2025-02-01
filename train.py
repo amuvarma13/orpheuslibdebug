@@ -4,7 +4,7 @@ import wandb
 wandb.init(project="orpheusdeblib", name="s4")
 
 
-model_name = "amuvarma/3b-zuckreg-convo-projpretrain"
+model_name = "amuvarma/zuck-3bregconvo-automodelcompat"
 
 #
 orpheus = OrpheusTrainer(
