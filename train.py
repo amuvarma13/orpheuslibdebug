@@ -1,15 +1,14 @@
 from orpheus.src.orpheus import OrpheusTrainer
 import wandb
 
-wandb.init(project="orpheusdeblib", name="s3")
+wandb.init(project="orpheusdeblib", name="s4")
 
-dataset_name = "amuvarma/flattened-convos-regzuck"
 
-model_name = "amuvarma/3b-10m-pretrain-full"
+model_name = "amuvarma/3b-zuckreg-convo-projpretrain"
 
 #
 orpheus = OrpheusTrainer(
-    stage = "stage_3",
+    stage = "stage_4",
     model_name = model_name,
     batch_size = 21, # use batch_size * number_of_gpus = 64 for quickest training
 )
