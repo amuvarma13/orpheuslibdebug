@@ -1,4 +1,4 @@
-from orpheus import OrpheusUtility
+from orpheus.src.orpheus import OrpheusUtility
 orpheus = OrpheusUtility()
 
 checkpoint_name = "checkpoints/checkpoint-5996" # find <TRAINING STEPS> in checkpoints/
