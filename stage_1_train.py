@@ -1,4 +1,4 @@
-from orpheus import OrpheusTrainer
+from orpheus.src.orpheus import OrpheusTrainer
 import wandb 
 wandb.init(project="orpheusdeblib", name="s1")
 
