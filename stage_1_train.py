@@ -1,4 +1,4 @@
-from orpheus import OrpheusTrainer
+from orpheus.src.orpheus import OrpheusTrainer
 
 #optionally set up wandb for tracking
 import wandb #=> pip install wandb
