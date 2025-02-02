@@ -1,6 +1,6 @@
 from orpheus.src.orpheus import OrpheusTrainer
 import wandb 
-wandb.init(project="orpheusdeblib", name="s1")
+wandb.init(project="orpheus-luna-stage1", name="r0")
 
 
 
