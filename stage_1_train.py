@@ -1,4 +1,4 @@
-from orpheus.src.orpheus import OrpheusUtility
+from orpheus import OrpheusUtility
 
 print(OrpheusUtility)
 # import wandb 
