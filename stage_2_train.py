@@ -1,6 +1,6 @@
 from orpheus.src.orpheus import OrpheusTrainer
 import wandb 
-wandb.init(project="orpheus-luna-stage2", name="r3")
+wandb.init(project="orpheus-luna-stage2", name="r4")
 
 dataset_name = "amuvarma/luna-convos"
 model_name = "amuvarma/canopy-tune-stage_1-luna"
