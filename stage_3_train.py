@@ -1,4 +1,4 @@
-from orpheus import OrpheusTrainer
+from orpheus.src.orpheus import OrpheusTrainer
 
 model_name = "amuvarma/canopy-tune-stage_2-luna" # from stage_2_train.py
 #** loading the datasets can take a while, even up to 30 mins **
