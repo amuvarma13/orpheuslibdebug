@@ -1,4 +1,7 @@
 from orpheus.src.orpheus import OrpheusTrainer, OrpheusDataProcessor
+import wandb
+
+wandb.init(project="orpheus-luna-stage5", name="r5")
 
 data_processor = OrpheusDataProcessor()
 
