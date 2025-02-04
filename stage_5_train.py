@@ -2,17 +2,17 @@ from orpheus.src.orpheus import OrpheusTrainer, OrpheusDataProcessor
 
 data_processor = OrpheusDataProcessor()
 
-speech_dataset_name = "amuvarma/luna-6k"
+speech_dataset_name = "amuvarma/canopy-tune-stage_5-luna"
 
-dataset = data_processor.fast_load_dataset(speech_dataset_name)
+processed_dataset = data_processor.fast_load_dataset(speech_dataset_name)
 
 # dataset = dataset.select(range(100))
 
-print("processed dataset",dataset)
+# print("processed dataset",dataset)
 
-processed_dataset = data_processor.adapt_stage_1_to_stage_5_dataset(dataset)
+# processed_dataset = data_processor.adapt_stage_1_to_stage_5_dataset(dataset)
 
-print("adapted dataset",processed_dataset)
+# print("adapted dataset",processed_dataset)
 
 
 processed_dataset.push_to_hub("amuvarma/canopy-tune-stage_5-luna")
