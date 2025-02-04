@@ -1,4 +1,7 @@
 from orpheus.src.orpheus import OrpheusTrainer
+import wandb
+
+wandb.init(project="orpheus-luna-stage4", name="r4")
 
 model_name = "amuvarma/canopy-tune-stage_3-luna" # from stage_2_train.py
 #** loading the datasets can take a while, even up to 30 mins **
