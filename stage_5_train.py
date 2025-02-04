@@ -22,6 +22,7 @@ processed_dataset = data_processor.fast_load_dataset(speech_dataset_name)
 orpheus = OrpheusTrainer(    
     stage = "stage_5",
     dataset = processed_dataset, 
+    processed_dataset = True,
     model_name = "amuvarma/canopy-tune-stage_4-luna" # pass a 🤗 model or local checkpoint folder)
 )
 
