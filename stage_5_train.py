@@ -4,10 +4,10 @@ data_processor = OrpheusDataProcessor()
 
 speech_dataset_name = "amuvarma/luna-6k"
 
-dataset = data_processor.fast_load_dataset(speech_dataset_name)
-dataset = dataset.select(range(10))
+# dataset = data_processor.fast_load_dataset(speech_dataset_name)
+# dataset = dataset.select(range(10))
 
-processed_dataset = data_processor.adapt_stage_1_to_stage_5_dataset(dataset)
+# processed_dataset = data_processor.adapt_stage_1_to_stage_5_dataset(dataset)
 
 # def ensure_question_audio(example):
 #     if "question_audio" not in example:
@@ -16,7 +16,9 @@ processed_dataset = data_processor.adapt_stage_1_to_stage_5_dataset(dataset)
 
 # dataset = dataset.map(ensure_question_audio)
 
-processed_dataset.push_to_hub("amuvarma/canopy-tune-stage_5-luna-deb")
+#processed_dataset.push_to_hub("amuvarma/canopy-tune-stage_5-luna-deb")
+
+processed_dataset = data_processor.fast_load_dataset("amuvarma/canopy-tune-stage_5-luna-deb")
 
 orpheus = OrpheusTrainer(    
     stage = "stage_5",
