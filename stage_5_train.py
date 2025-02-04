@@ -6,6 +6,8 @@ speech_dataset_name = "amuvarma/luna-6k"
 
 dataset = data_processor.fast_load_dataset(speech_dataset_name)
 
+dataset = dataset.select(range(100))
+
 processed_dataset = data_processor.adapt_stage_1_to_stage_5_dataset(dataset)
 
 
