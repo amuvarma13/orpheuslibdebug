@@ -8,6 +8,8 @@ dataset = data_processor.fast_load_dataset(speech_dataset_name)
 
 processed_dataset = data_processor.adapt_stage_1_to_stage_5_dataset(dataset)
 
+processed_dataset.push_to_hub("amuvarma/canopy-tune-stage_5-luna")
+
 orpheus = OrpheusTrainer(    
     stage = "stage_5",
     dataset = processed_dataset, 
