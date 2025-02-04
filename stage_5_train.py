@@ -15,7 +15,7 @@ processed_dataset = data_processor.fast_load_dataset(speech_dataset_name)
 # print("adapted dataset",processed_dataset)
 
 
-processed_dataset.push_to_hub("amuvarma/canopy-tune-stage_5-luna")
+# processed_dataset.push_to_hub("amuvarma/canopy-tune-stage_5-luna")
 
 # processed_dataset = data_processor.fast_load_dataset("amuvarma/canopy-tune-stage_5-luna-deb")
 
