@@ -1,6 +1,6 @@
 from orpheus.src.orpheus import OrpheusTrainer
 
-model_name = "checkpoints/checkpoint-7813" # from stage_2_train.py
+model_name = "amuvarma/canopy-tune-stage_3-luna" # from stage_2_train.py
 #** loading the datasets can take a while, even up to 30 mins **
 orpheus = OrpheusTrainer(
     stage = "stage_4",
